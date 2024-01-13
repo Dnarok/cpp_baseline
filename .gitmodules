@@ -4,3 +4,6 @@
 [submodule "external/contract"]
 	path = external/contract
 	url = https://github.com/Dnarok/contract.git
+[submodule "external/spdlog"]
+	path = external/spdlog
+	url = https://github.com/gabime/spdlog.git
