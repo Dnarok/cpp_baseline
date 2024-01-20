@@ -1,4 +1,4 @@
-![msvc and gcc](https://github.com/Dnarok/cpp_baseline/.github/workflows/cmake-multi-platform.yml/badge.svg)
+[![msvc and gcc](https://github.com/Dnarok/cpp_baseline/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/Dnarok/cpp_baseline/actions/workflows/cmake-multi-platform.yml)
 
 Baseline for future C++ projects.
 
