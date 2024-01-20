@@ -34,7 +34,7 @@ jobs:
             c_compiler: gcc
             cpp_compiler: g++
           - os: ubuntu-latest
-            c_compiler: clang
+            c_compiler: clang-17
             cpp_compiler: clang++
         exclude:
           - os: windows-latest
@@ -50,12 +50,13 @@ jobs:
       with:
         submodules: recursive
 
-    - name: Update to clang-15 when on ubuntu
+    - name: Update to clang-17 when on ubuntu
       if: matrix.os == 'ubuntu-latest' && matrix.cpp_compiler == 'clang++'
       shell: bash
       run: |
-           sudo apt update
-           sudo apt install clang-15 
+           wget https://apt.llvm.org/llvm.sh
+           chmod u+x llvm.sh
+           sudo ./llvm.sh 17
 
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
